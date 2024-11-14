@@ -1,7 +1,7 @@
 {
   "version": 1,
   "dependencies": {
-    "net8.0": {
+    "net9.0": {
       "Polly.Core": {
         "type": "Direct",
         "requested": "[8.4.1, )",
