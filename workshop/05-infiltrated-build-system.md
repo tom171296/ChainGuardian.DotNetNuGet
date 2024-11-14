@@ -32,7 +32,7 @@ Beside the `--locked-mode` flag you can also use the following configuration in 
 ```XML
 <PropertyGroup>
    <!-- assuming you have the MSBuild property (ContinuousIntegrationBuild) set to true -->
-   <RestoreLockedMode Condition=<"'$(ContinuousIntegrationBuild)' == 'true'">true</RestoreLockedMode>
+   <RestoreLockedMode Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</RestoreLockedMode>
 </PropertyGroup>
 ```
 
@@ -57,7 +57,7 @@ To make your build even more reliable, [there a even more project properties](ht
    <AssemblySearchPaths>
 
    </AssemblySearchPaths>
-</PropertyGroup>>
+</PropertyGroup>
 ```
 
 - `NetCoreTargetingPackRoot` - Disable msbuild's lookup of dotnetcore through default install locations. Instead, resolve from nuget feed.
