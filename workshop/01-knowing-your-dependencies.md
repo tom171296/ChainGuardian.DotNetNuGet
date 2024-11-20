@@ -27,9 +27,9 @@ dotnet tool install --global CycloneDX
 Generate the SBOM file for the Chainguardian solution:
 
 ```powershell
-dotnet-cyclonedx .\ChainGuardian.DotNetNuGet.sln
+dotnet-cyclonedx ./ChainGuardian.DotNetNuGet.sln
 ```
 
 This will generate a file called `bom.xml` in the root of the repository. Open this file and inspect the content of it.
 
-Go to the next step: [02. dependency-confusion.md](./02-vulnerabilities.md)
+Go to the next step: [02. vulnerabilities.md](./02-vulnerabilities.md)

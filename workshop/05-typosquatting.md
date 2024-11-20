@@ -10,4 +10,4 @@ Some of the mitigations that you did for the dependency confusion attack can als
 
 By implementing these proactive measures, you can significantly reduce the risk of typosquatting attacks on your software supply chain. Safeguard your projects against potential vulnerabilities by reviewing and updating your Nuget configurations to protect your software from malicious code infiltration.
 
-Go to the next attack: [04. dependency confusion](./04-dependency-confusion.md.md) or an [05. infiltrated build system](./05-infiltrated-build-system.md)
+Go to the next attack: [06. infiltrated build system](./06-infiltrated-build-system.md)

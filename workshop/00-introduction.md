@@ -7,8 +7,6 @@ Software applications are no longer built entirely from custom code. Instead, th
 ## Prerequisites
 - Visual Studio (code)
 - [.Net SDK installed](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks)
-- Docker desktop / rancher installed locally
-- Have a [github.com](www.github.com) account
 - Have this repository cloned on your local machine
 
 ## Workshop
