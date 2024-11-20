@@ -10,12 +10,9 @@
       },
       "Refit": {
         "type": "Direct",
-        "requested": "[7.1.2, )",
-        "resolved": "7.1.2",
-        "contentHash": "ZB1ZgciDq/lNz3OAPfYah4rCVYeI4LMxEksYUff8p4Bth9uf/8WQCXuzMckRJjh3NLysuwdCNkgxnezCm1SqTw==",
-        "dependencies": {
-          "System.Net.Http.Json": "8.0.0"
-        }
+        "requested": "[7.2.22, )",
+        "resolved": "7.2.22",
+        "contentHash": "xzpjDvWTKaJkhRejrHI6E2WXs2CaJYWZTMICq5Jha4wlSVvR3dd9n3M4p3X7BQ6uw0LJSFiHlTYwzjQIbJdArg=="
       },
       "System.Text.Json": {
         "type": "Direct",
@@ -41,14 +38,6 @@
         "type": "Transitive",
         "resolved": "1.1.3",
         "contentHash": "3Wrmi0kJDzClwAC+iBdUBpEKmEle8FQNsCs77fkiOIw/9oYA07bL1EZNX0kQ2OMN3xpwvl0vAtOCYY3ndDNlhQ=="
-      },
-      "System.Net.Http.Json": {
-        "type": "Transitive",
-        "resolved": "8.0.0",
-        "contentHash": "48Bxrd6zcGeQzS4GMEDVjuqCcAw/9wcEWnIu48FQJ5IzfKPiMR1nGtz9LrvGzU4+3TLbx/9FDlGmCUeLin1Eqg==",
-        "dependencies": {
-          "System.Text.Json": "8.0.0"
-        }
       },
       "System.Runtime": {
         "type": "Transitive",

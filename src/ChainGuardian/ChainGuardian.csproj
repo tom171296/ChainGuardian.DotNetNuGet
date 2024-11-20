@@ -28,7 +28,7 @@
 
   <ItemGroup>
     <PackageReference Include="polly.core" Version="8.4.1" />
-    <PackageReference Include="refit" Version="7.1.2" />
+    <PackageReference Include="refit" Version="7.2.22" />
     <PackageReference Include="System.text.regularexpressions" Version="4.3.1" />
 
     <!-- // Transitive dependencies -->
