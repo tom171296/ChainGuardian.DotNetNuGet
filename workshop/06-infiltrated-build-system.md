@@ -55,15 +55,24 @@ Exercise: Add the `ContinuousIntegrationBuild` property to the project file.
 
 To make your build even more reliable, [there a even more project properties](https://github.com/dotnet/reproducible-builds/blob/main/Documentation/Reproducible-MSBuild/Techniques/toc.md) that you can set. These properties are used to configure [MSBUILD](https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props?view=aspnetcore-9.0).
 
-MSBUILD looks for a file called `Directory.Build.Props`
+The settings below can be configured in two ways. You can add them to every csproj file in your project or you can create a [file called `Directory.Build.props`](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022). This file enables you to customize all project files in your directory or sub-directories of the location where you place the file.
+
+**Excercise**: Add the settings below to your solution and see the effect of each setting on your build behaviour.
 
 - `AssemblySearchPaths` - Restrict the reference assembly search path to avoid machine-specific dependencies.
 ```XML
-<PropertyGroup>
-   <AssemblySearchPaths>
-
-   </AssemblySearchPaths>
-</PropertyGroup>>
+<!--
+    Restrict the reference assembly search path to avoid machine-specific dependencies. See
+    https://github.com/dotnet/msbuild/blob/3deec2fe6b7cdc7c3f2458d23d5451893872c031/documentation/wiki/ResolveAssemblyReference.md?plain=1#L148
+  -->
+<<PropertyGroup>
+    <AssemblySearchPaths>
+      {CandidateAssemblyFiles};
+      {HintPathFromItem};
+      {TargetFrameworkDirectory};
+      {RawFileName}
+    </AssemblySearchPaths>
+  </PropertyGroup>
 ```
 
 - `NetCoreTargetingPackRoot` - Disable msbuild's lookup of dotnetcore through default install locations. Instead, resolve from nuget feed.
@@ -82,3 +91,5 @@ MSBUILD looks for a file called `Directory.Build.Props`
 ```
 
 All these settings are good to understand and now what they do. To make this easier for you, Microsoft created a [NuGet package 'ReproducibleBuilds'](https://github.com/dotnet/reproducible-builds/tree/main) that does all these settings for you.
+
+This is the end of the workshop!
