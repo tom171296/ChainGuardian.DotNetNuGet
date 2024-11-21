@@ -1,5 +1,6 @@
 - trivy scanning SBOM for vulnerabilities and licenses
 - Dependecy track
+- Renovate stuff
 - Attestations / signing
   - cosign
 - openssf
