@@ -26,4 +26,4 @@ A third thing that you can do is to **configure trusted signers**. This way you 
 
 To protect your software from the serious risks of dependency confusion, it's essential to take proactive measures. Start by configuring Nuget to only use a private feed, ensuring control over the packages integrated into your projects. If you must use a public feed, mitigate risks by claiming your package prefix, setting up package source mapping, and configuring trusted signers. Taking these steps will significantly reduce the likelihood of malicious code infiltrating your software supply chain. Act now by reviewing and updating your Nuget configurations to safeguard your projects against these potential vulnerabilities.
 
-Go to the next attack: [05. typosquatting attack](./04-typosquatting.md)
+Go to the next attack: [05. typosquatting attack](./05-typosquatting.md)
