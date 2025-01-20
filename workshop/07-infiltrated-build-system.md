@@ -6,10 +6,12 @@ In the SolarWinds case, attackers got access to the build system. They inserted 
 All the other attacks that are described in this workshop are about your dependencies and how you can protect yourself from them. A supply chain attack on your build environment is a different kind of attack. You're not in control of the packages that are cached locally on your build server. If a hacker gets access to your build server, they can add malicious code to your local cache. If NuGet decides to use the local cache of the build server to restore the packages, the malicious code will be used in your software.
 
 ### Mitigation
+
 To protect your software from the serious risks of an infiltrated build system, it's essential to take proactive measures. Start by securing your build environment. Make sure that only authorized personnel have access to the build environment. Make sure that the build environment is up-to-date with the latest security patches. Make sure that the build environment is monitored for any suspicious activity.
 
 From a .NET perspective, there are mainly two things that you can do to make that the build result on your local machine is the same as the build result on the build server ([reproducible builds](https://reproducible-builds.org/)).
 The first thing that I would recommend is the use of a *package lock file*. With `PackageReference`, NuGet always tries to produce the same closure of package dependencies if the package reference list has not changed. However, there are a few scenarios where it may not be able to do so. Cases where the package graph may change include:
+
 - **Package deletion**, nuget.org doesn't support package deletion, but not all package sources have this constraint.
 - **Floating versions**, where the version range is not pinned to a specific version.
 - **Package content mismatch**, the same version of a package may have different content on different package sources.
