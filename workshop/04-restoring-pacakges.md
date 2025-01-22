@@ -15,4 +15,4 @@ Now we are going to have a look at two different types of supply chain attacks t
 
 Look at two different types of supply chain attacks that can happen when your packages are being restored.
 - [dependency confusion](./04-dependency-confusion.md)
-- [typosquatting](./04-typosquatting.md)
+- [typosquatting](./05-typosquatting.md)
