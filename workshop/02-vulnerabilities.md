@@ -1,4 +1,5 @@
-### Vulnerabilities
+# Vulnerabilities
+
 If you include software of which you don't know the origin, you are exposed to the risk of including malicious code in your software. There can be vulnerabilities in the package that could be exploited and be used as a backdoor to harm your environment.
 
 Looking at recent history, there a examples of malicious code having a big impact on the world of software development. One of the most famous examples was the finding of a vulnerability in Log4J, an open-source logging library that is widely used by apps and services across the internet. Exploiting this vulnerability, attackers could break into systems, steal passwords and logins, extract data and infect networks.
@@ -10,6 +11,7 @@ Run `dotnet list package --vulnerable`, this will output all vulnerabilities tha
 To get all vulnerabilities, including your transitive packages, run `dotnet list package --include-transitive --vulnerable`. This result will say that there is a vulnerability in the transitive package `System.Text.Json` version that is used.
 
 The output of these commands tell you a few different things:
+
 - In what package (top level or transitive) the vulnerability is present
 - What the impact/severity of the vulnerability is
 - A link to the CVE (Common Vulnerabilities and Exposures) database where you can find more information about the vulnerability
@@ -23,6 +25,7 @@ With the introduction of .NET 9, the private artifact store issue is fixed. Ther
 Run the command `dotnet restore` in the root of the repository. This will restore all the packages and do a vulnerability check on all the packages that are being restored. **Check the output of the restore command.** This will output a list of all the vulnerabilities that are present in the packages that are being restored as warnings in the console.
 
 The console outputs only the direct dependencies that have vulnerabilities. In the .NET 8.0.100 SDK the `restore` command defaulted all settings that are required to do a vulnerability check:
+
 - `NuGetAudit` is set to `true`
 - `NuGetAuditMode` is set to `direct`
 - `NuGetAuditLevel` is set to `low`
