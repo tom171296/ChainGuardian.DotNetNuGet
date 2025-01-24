@@ -94,4 +94,4 @@ The settings below can be configured in two ways. You can add them to every cspr
 
 All these settings are good to understand and now what they do. To make this easier for you, Microsoft created a [NuGet package 'ReproducibleBuilds'](https://github.com/dotnet/reproducible-builds/tree/main) that does all these settings for you.
 
-This is the end of the workshop!
+Go to the next page to [learn about the licenses of the libraries you use](07-license-trap.md).

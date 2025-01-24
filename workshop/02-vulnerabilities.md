@@ -6,7 +6,9 @@ Looking at recent history, there a examples of malicious code having a big impac
 
 The `dotnet list` command has an option that you can list all vulnerable packages.
 
-Run `dotnet list package --vulnerable`, this will output all vulnerabilities that are present in the project. The output will say that there are no vulnerabilities present in the project. This is because the list command by default doesn't look at all transitive packages like you saw before.
+> Exercise:
+>
+> Run `dotnet list package --vulnerable`, this will output all vulnerabilities that are present in the project. The output will say that there are no vulnerabilities present in the project. This is because the list command by default doesn't look at all transitive packages like you saw before.
 
 To get all vulnerabilities, including your transitive packages, run `dotnet list package --include-transitive --vulnerable`. This result will say that there is a vulnerability in the transitive package `System.Text.Json` version that is used.
 
@@ -22,7 +24,9 @@ Starting from .NET 8 (SDK 8.0.100) the `restore` command can audit([Auditing pac
 
 With the introduction of .NET 9, the private artifact store issue is fixed. There is a new property that you can add to the `NuGet.config` file that allows you to set an audit source. By setting this property, NuGet gets its [vulnerabilityInfo resource](https://learn.microsoft.com/en-us/NuGet/api/vulnerability-info) from a different source than the configured NuGet feeds.
 
-Run the command `dotnet restore` in the root of the repository. This will restore all the packages and do a vulnerability check on all the packages that are being restored. **Check the output of the restore command.** This will output a list of all the vulnerabilities that are present in the packages that are being restored as warnings in the console.
+> Exercise:
+>
+> Run the command `dotnet restore` in the root of the repository. This will restore all the packages and do a vulnerability check on all the packages that are being restored. **Check the output of the restore command.** This will output a list of all the vulnerabilities that are present in the packages that are being restored as warnings in the console.
 
 The console outputs only the direct dependencies that have vulnerabilities. In the .NET 8.0.100 SDK the `restore` command defaulted all settings that are required to do a vulnerability check:
 
@@ -52,6 +56,8 @@ Now you have a situation where the restore command will output all the vulnerabi
 <WarningsAsErrors>NU1901,NU1903,NU1903,NU1904</WarningsAsErrors>
 ```
 
-Run the `dotnet restore` or `dotnet build` command and see that you are no longer able to create a successful build. **Now update the packages so that the build succeeds.**
+> Exercise:
+>
+> Run the `dotnet restore` or `dotnet build` command and see that you are no longer able to create a successful build. **Now update the packages so that the build succeeds.**
 
-Go to the next step: [03. license trap](./03-license-trap.md.md)
+Go to the next step: [03. restoring packages](./03-restoring-packages.md)

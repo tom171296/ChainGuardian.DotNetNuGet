@@ -35,4 +35,11 @@ For example, imagine you're using a popular logging library that's MIT licensed.
 
 ## Licenses in .NET
 
+Each third party library has its own license. You need to make sure that the licenses of the libraries you use are compatible with the licenses of the libraries you distribute.
 
+There are several tools that can help you with this, today we will use [trivy](https://github.com/aquasecurity/trivy) to scan the licenses of the libraries you use.
+Trivy is a tool that can scan your project with different scanners. Think of vulnerabilities, secrets, IAC Misconfigurations and licenses.
+
+> Exercise:
+>
+> For the last step in this workshop, install trivy and find out which licenses are used in your project.

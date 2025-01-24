@@ -13,6 +13,4 @@ Package resolution for transitive dependencies follows a set of rules. To unders
 
 Now we are going to have a look at two different types of supply chain attacks that can happen when your packages are being restored.
 
-Look at two different types of supply chain attacks that can happen when your packages are being restored.
-- [dependency confusion](./04-dependency-confusion.md)
-- [typosquatting](./05-typosquatting.md)
+Go to the next attack: [dependency confusion](./04-dependency-confusion.md)

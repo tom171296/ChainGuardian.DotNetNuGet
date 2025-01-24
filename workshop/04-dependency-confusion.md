@@ -10,7 +10,9 @@ For example, you are using the package MyCompany.Common with version `1.0.0` and
 
 By default, having both a public and a private feed is a risk. I would recommend to **only use a private feed**. This way you (your company) has control over the packages that are available to your software projects. You can configure Nuget to only use the private feed. Configuring NuGet to use a certain package source is done via the [`nuget.config` file](https://learn.microsoft.com/en-us/nuget/reference/nuget-config-file).
 
-**Exercise**: Create a `nuget.config` file in the root of the repository and configure NuGet to use the public NuGet feed.
+> Exercise:
+>
+> Create a `nuget.config` file in the root of the repository and configure NuGet to use the public NuGet feed.
 
 If for some reason you use / require a public feed next to your private feed, there are a few things that you can do to mitigate the risk of dependency confusion. The first thing that you can (if you publish a package yourself) is [claim the prefix](https://learn.microsoft.com/en-us/nuget/nuget-org/id-prefix-reservation) of your packages. This means that you claim the prefix of your packages on the public Nuget feed. This way, the public Nuget feed will not allow anyone to upload a package with the same prefix as your packages. This will prevent the hacker from uploading a package with the same name as your package. In the example of `MyCompany.Common`, you would claim the prefix `MyCompany`.
 
@@ -18,11 +20,15 @@ We are **not going** to do this in this workshop, but it is good to know that th
 
 The second thing that you can do is use the `nuget.config` file to configure the package sources that you want to use. You can add a `packageSourceMapping` element to the `nuget.config` file. This element allows you to map a package source to a specific feed. This way you can configure NuGet to only use the private feed for the package `MyCompany.Common`.
 
-**Exercise**: Add the package source mapping to the `nuget.config` file and configure NuGet to pull the required packages from the configured feed. 
+> Exercise:
+>
+> Add the package source mapping to the `nuget.config` file and configure NuGet to pull the required packages from the configured feed. 
 
 A third thing that you can do is to **configure trusted signers**. This way you can configure NuGet to only accept packages that are signed by a trusted signer. This way you can make sure that the packages that are being restored are coming from a trusted source. This is a good way to mitigate the risk of dependency confusion.
 
-**Exercise**: Configure trusted signers in the `nuget.config` file.
+> Exercise:
+>
+> Configure trusted signers in the `nuget.config` file.
 
 To protect your software from the serious risks of dependency confusion, it's essential to take proactive measures. Start by configuring Nuget to only use a private feed, ensuring control over the packages integrated into your projects. If you must use a public feed, mitigate risks by claiming your package prefix, setting up package source mapping, and configuring trusted signers. Taking these steps will significantly reduce the likelihood of malicious code infiltrating your software supply chain. Act now by reviewing and updating your Nuget configurations to safeguard your projects against these potential vulnerabilities.
 
