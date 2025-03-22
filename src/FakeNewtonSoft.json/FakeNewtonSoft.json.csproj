@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    
+    <!-- NuGet Package Information -->
+    <PackageId>Newtonsoft.Json</PackageId>
+    <Version>13.0.3</Version>
+    <Authors>ChainGuardian-SecurityDemo</Authors>
+    <Description>[SECURITY DEMONSTRATION ONLY] Dependency confusion demo</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

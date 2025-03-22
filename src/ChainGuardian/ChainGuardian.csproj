@@ -2,15 +2,26 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>  
+    <Nullable>enable</Nullable>
+
+    <NugetAudit>False</NugetAudit> <!-- True --> <!-- Since .NET 8-->
+    <NugetAuditMode>Direct</NugetAuditMode> <!-- All, changed since .NET 10 -->
+    <NugetAuditLevel>low</NugetAuditLevel> <!-- critical, high -->
+
+    <!-- <TreatWarningsAsErrors>true</TreatWarningsAsErrors> -->
+
+    <!-- <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>  -->
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="polly.core" Version="8.4.*" />
     <PackageReference Include="refit" Version="7.0.0" />
     <PackageReference Include="System.text.regularexpressions" Version="4.3.0" />
+    <PackageReference Include="System.Text.Json" Version="10.0.0-preview.4.25258.110" />
+
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
 </Project>

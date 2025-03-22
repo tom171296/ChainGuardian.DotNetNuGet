@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+  <!-- <Target Name="AssertRestoreTaskOutputProperties"
+          AfterTargets="Restore"
+          Condition="'$(CI)' != 'true'">
+    <Message Importance="High" 
+            Text="RestoreProjectCount: $(RestoreProjectCount)" />
+    <Message Importance="High" 
+            Text="RestoreProjectsAuditedCount: $(RestoreProjectsAuditedCount)" />
+    <Warning
+      Condition="'$(RestoreProjectsAuditedCount)' != '$(RestoreProjectCount)'"
+      Text="Restore did not audit every project in the solution. Expected: $(RestoreProjectCount) Found: $(RestoreProjectsAuditedCount)" />
+  </Target> -->
+</Project>
