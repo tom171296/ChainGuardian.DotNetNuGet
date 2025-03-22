@@ -21,9 +21,12 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: 10.0.x
     - name: Restore dependencies
       run: dotnet restore
+    - name: test
+      run: dotnet list package --include-transitive
+
     - name: Build
       run: dotnet build --no-restore
     - name: Test
@@ -42,27 +45,12 @@ jobs:
       with:
         scan-type: 'fs'
         ignore-unfixed: false
-        format: 'cyclonedx'
-        output: 'result.json'
+        format: 'sarif'
+        output: 'trivy-results.sarif'
         severity: 'MEDIUM,HIGH,CRITICAL'
 
-    # - name: Upload Trivy scan results to GitHub Security tab
-    #   uses: github/codeql-action/upload-sarif@v3
-    #   with:
-    #     sarif_file: 'trivy-results.sarif'
-    
-    - name: Install CycloneDX in dotnet cli
-      run: dotnet tool install --global CycloneDX
-    
-    - name: CycloneDX .NET Generate SBOM
-      run: dotnet CycloneDX ChainGuardian.DotNetNuGet.sln -j -o . 
-    
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v4.3.3
+    - name: Upload Trivy scan results to GitHub Security tab
+      uses: github/codeql-action/upload-sarif@v3
       with:
-          path: | 
-              bom.json
-              result.json
-          name: ChainGuardian-DotNet-BOM
-          if-no-files-found: error
-          retention-days: 5
+        sarif_file: 'trivy-results.sarif'
+
