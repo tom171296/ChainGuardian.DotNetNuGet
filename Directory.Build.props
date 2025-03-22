@@ -1,0 +1,20 @@
+<Project>
+
+  <!-- <PropertyGroup>
+    <AssemblySearchPaths>
+      {CandidateAssemblyFiles};
+      {HintPathFromItem};
+      {TargetFrameworkDirectory};
+      {RawFileName}
+    </AssemblySearchPaths>
+  </PropertyGroup>
+
+    <PropertyGroup>
+        <NetCoreTargetingPackRoot>[UNDEFINED]</NetCoreTargetingPackRoot>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
+        <DisableImplicitLibraryPacksFolder>true</DisableImplicitLibraryPacksFolder>
+    </PropertyGroup>     -->
+</Project>
