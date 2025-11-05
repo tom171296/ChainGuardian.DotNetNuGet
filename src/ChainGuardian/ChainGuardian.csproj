@@ -6,9 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-    <NugetAudit>False</NugetAudit> <!-- True --> <!-- Since .NET 8-->
-    <NugetAuditMode>Direct</NugetAuditMode> <!-- All, changed since .NET 10 -->
-    <NugetAuditLevel>low</NugetAuditLevel> <!-- critical, high -->
+    <NuGetAudit>False</NuGetAudit>
+    <NuGetAuditMode>Direct</NuGetAuditMode>
+    <NuGetAuditLevel>Low</NuGetAuditLevel>
 
     <!-- <TreatWarningsAsErrors>true</TreatWarningsAsErrors> -->
 
